@@ -11,15 +11,15 @@
 <title>Title</title>
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid jumbox">
         <div class="container">
             <h1 class="display-4">Weather Checker</h1>
         </div>
     </div>
-    <div class="d-flex align-items-center container container-fluid" style="width: 200px;">
+    <div class="container search-box">
         <div>
             <h1>Search for a City:</h1>
-            <input id="user-iput">
+            <input id="user-iput" placeholder="Enter City name">
             <br>
             <button id="searchBtn">Search</button>
         </div>
@@ -29,66 +29,76 @@
 
         </ul>
     </div>
-    <div class="d-flex align-items-center container container-fluid" style="width: 200px;">
-        <div class="justify-content-center ">
+    <div class="d-flex align-items-center container" style="width: 200px;">
+        <div class="justify-content-center city-box ">
             <h2 id="city-name">City Name</h2>
-            <h3 id="today">Current Date</h3>
-            <p>Temp: <span id="temperature"></span></p>
-            <p>Wind: <span id="wind"></span></p>
-            <p>Humidity: <span id="humidity"></span></p>
+            <h3 id="today"></h3>
+            <p>Temp: <span id="temperature"></span> &#8457</p>
+            <p>Wind: <span id="wind"></span> MPH</p>
+            <p>Humidity: <span id="humidity"></span> %</p>
             <p>UV Index: <span id="uv-index"></span></p>
         </div>
     </div>
     <div>
         <h2>5 Day Forecast:</h2>
     </div>
-    <div class="row align-items-start">
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="forecast-container">
+        <div class="card border-primary mb-3 forecast-card" style="max-width: 18rem;">
+            <div class="card-header" id="day1"></div>
+            <div class="card-body text-primary">
+            <h5 class="card-title" id="icon1"></h5>
+            <h5 class="card-title" id="temp1"></h5>
+            <h5 class="card-title" id="wind1"></h5>
+            <h5 class="card-title" id="hum1"></h5>
             </div>
         </div>
-        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-                <h5 class="card-title">Secondary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                </p>
+        <div class="card border-secondary mb-3 forecast-card" style="max-width: 18rem;">
+            <div class="card-header" id="day2"></div>
+            <div class="card-body text-secondary">
+                <h5 class="card-title" id="icon2"></h5>
+                <h5 class="card-title" id="temp2"></h5>
+                <h5 class="card-title" id="wind2"></h5>
+                <h5 class="card-title" id="hum2"></h5>
             </div>
         </div>
-        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-                <h5 class="card-title">Success card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="card border-success mb-3 forecast-card" style="max-width: 18rem;">
+            <div class="card-header" id="day3"></div>
+            <div class="card-body text-success">
+            <h5 class="card-title" id="icon3"></h5>
+            <h5 class="card-title" id="temp3"></h5>
+            <h5 class="card-title" id="wind3"></h5>
+            <h5 class="card-title" id="hum3"></h5>
             </div>
         </div>
-        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-                <h5 class="card-title">Danger card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="card border-danger mb-3 forecast-card" style="max-width: 18rem;">
+            <div class="card-header" id="day4"></div>
+            <div class="card-body text-danger">
+                <h5 class="card-title" id="icon4"></h5>
+            <h5 class="card-title" id="temp4"></h5>
+            <h5 class="card-title" id="wind4"></h5>
+            <h5 class="card-title" id="hum4"></h5>
             </div>
         </div>
-        <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
+        <div class="card border-warning mb-3 forecast-card" style="max-width: 18rem;">
+            <div class="card-header" id="day5"></div>
             <div class="card-body">
-                <h5 class="card-title">Warning card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title" id="icon5"></h5>
+                <h5 class="card-title" id="temp5"></h5>
+                <h5 class="card-title" id="wind5"></h5>
+                <h5 class="card-title" id="hum5"></h5>
             </div>
-        </div>
-        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-                <h5 class="card-title">Info card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
+            <div class="card border-warning mb-3 forecast-card" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title" id="icon6"></h5>
+                    <h5 class="card-title" id="temp6"></h5>
+                    <h5 class="card-title" id="wind6"></h5>
+                    <h5 class="card-title" id="hum6"></h5>
+                </div>
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

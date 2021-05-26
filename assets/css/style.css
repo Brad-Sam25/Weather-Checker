@@ -1,0 +1,26 @@
+.jumbox {
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.search-box{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.city-box {
+    border: 1px solid black;
+    padding: 20px;
+    width: 500px;
+}
+
+.forecast-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.forecast-card {
+    border: 2px solid black;
+    border-radius: 1rem;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
